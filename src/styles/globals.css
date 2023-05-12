@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: white;
+}
+
+
+
+*,
+body,
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+.btn {
+  @apply flex rounded-3xl px-3 py-1 items-center h-10;
+}
+
+.btn-small {
+  @apply text-xs h-8;
+}
+
+.btn-primary {
+  @apply bg-black text-white px-9;
+  border-width: 0.727811px 0.727811px 2.18343px 0.727811px;
+  border-style: solid;
+  border-color: #282828;
+}
+
+.btn-primary:hover {
+  @apply bg-white text-black rounded-full px-9;
+  border-width: 0.727811px 0.727811px 2.18343px 0.727811px;
+  border-style: solid;
+  border-color: #282828;
+}
+
+.btn-secondary {
+  @apply bg-white text-black rounded-full;
+  border-width: 0.727811px 0.727811px 2.18343px 0.727811px;
+  border-style: solid;
+  border-color: #282828;
+  /* Shadows/Soft */
+  box-shadow  : 0px 34px 100px rgba(143, 168, 191, 0.3);
+}
+
+.btn-secondary:hover {
+  @apply bg-black text-white;
+}
+
+.loading {
+  @apply flex justify-center items-center relative w-5 h-5;
+}
+
+.loading>span {
+  @apply absolute w-3.5 h-3.5 border-2 rounded-[50%];
+  animation   : loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.loading.loading-black>span {
+  border-color: #000 transparent transparent transparent;
+}
+
+#burger-menu {
+  outline: none;
+}
