@@ -8,8 +8,8 @@ interface DefaultLayoutProps {
 
 export const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-cover bg-left" style={{ backgroundImage: `url(/bg.avif)` }}>
-      <div className="min-h-screen bg-cover bg-left bg-white bg-opacity-70">{children}</div>
+    <div className=" bg-cover bg-left" style={{ backgroundImage: `url(/bg.avif)` }}>
+      <div className=" bg-white bg-opacity-70 bg-cover bg-left">{children}</div>
     </div>
   );
 };

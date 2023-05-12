@@ -1,1 +1,1 @@
-export * from './home-hero.component'
+export * from './weddinder'

@@ -9,12 +9,8 @@ import { ParallaxProvider } from "react-scroll-parallax";
 // import { hasCookie, setCookie } from "cookies-next";
 import { DefaultLayout } from "@layout";
 import { useEffect, useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--montserrat-font",
-  display: "swap",
-});
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
@@ -57,15 +53,17 @@ function LocalTreeApp({ Component, pageProps }: AppProps) {
       </Head>
       {/* <NextIntlProvider messages={messages}> */}
       <Provider>
-        <ParallaxProvider>
-          <main className={clsx(greatVibes.variable, "font-sans text-black")}>
-            {pageProps.layout ? null : (
-              <DefaultLayout hasScrolled={hasScrolled}>
-                <Component {...pageProps} />
-              </DefaultLayout>
-            )}
-          </main>
-        </ParallaxProvider>
+        <ChakraProvider>
+          <ParallaxProvider>
+            <main className={clsx(greatVibes.variable, "font-sans text-black")}>
+              {pageProps.layout ? null : (
+                <DefaultLayout hasScrolled={hasScrolled}>
+                  <Component {...pageProps} />
+                </DefaultLayout>
+              )}
+            </main>
+          </ParallaxProvider>
+        </ChakraProvider>
       </Provider>
       {/* </NextIntlProvider> */}
     </>

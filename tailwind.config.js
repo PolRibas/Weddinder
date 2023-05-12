@@ -89,6 +89,12 @@ module.exports = {
           info: "#56C0ED",
           success: "#459A33",
         },
+        yellow: {
+          200: "#5B4B9D"
+        },
+        pink: {
+          200: "#5B4B9D"
+        },
         corporateOrange: {
           100: "#FFECDA",
           150: "#FFD4AD",
